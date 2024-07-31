@@ -1,0 +1,21 @@
+<%= form_with model: student do |form| %>
+  <% if @student.errors.any? %>
+    <% @student.errors.full_messages.each do |message| %>
+      <p><%= message %></p>
+    <% end %>
+  <% end %>
+  <div>
+    <%= form.label :first_name %><br>
+    <%= form.text_field :first_name %>
+  </div>
+  <div>
+    <%= form.label :lastname %><br>
+    <%= form.text_field :lastname %>
+  </div>
+  <div>
+    <%= form.label :email %><br>
+    <%= form.text_field :email %>
+  </div>
+  <%= form.submit %>
+  <%= link_to "Back", students_path %>
+<% end %>
