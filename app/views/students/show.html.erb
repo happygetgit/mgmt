@@ -1,24 +1,39 @@
-<p> <%= notice %> </p>
-
-<h1>Student Information</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Email</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><%= @student.first_name %></td>
-      <td><%= @student.lastname %></td>
-      <td><%= @student.email %></td>
-    </tr>
-    <tr>
-      <td><%= link_to "Back", students_path %></td>
-      <td><%= link_to "Edit", edit_student_path(@student) %></td>
-    </tr>
-  </tbody>
-</table>
+<div class="col-lg-10">
+  <div class="card rounded-0 shadow mt-5 md-5">
+    <div class="card-body">
+      <p> <%= notice %> </p>
+      <h1>Student Information</h1>
+      <p>
+        <strong>First Name: </strong><%= @student.first_name %>
+      </p>
+      <p>
+        <strong>Last Name: </strong><%= @student.lastname %>
+      </p>
+      <p>
+        <strong>Email: </strong><%= @student.email %>
+      </p>
+      <p>
+        <strong>Phonenumber: </strong><%= @student.phonenumber %>
+      </p>
+      <p>
+        <strong>Date of birth: </strong><%= @student.dob %>
+      </p>
+      <p>
+        <strong>Permanent contact number: </strong><%= @student.permanent_contact_number %>
+      </p>
+      <p>
+        <strong>Alternate contact number: </strong><%= @student.alternate_contact_number %>
+      </p>
+      <p>
+        <strong>Local address: </strong><%= @student.local_address %>
+      </p>
+      <p>
+        <strong>Permanent address: </strong><%= @student.permanent_address %>
+      </p>
+      <div>
+        <%= link_to "Back", students_path, class: "btn btn-primary" %> 
+        <%= link_to "Edit", edit_student_path(@student), class: "btn btn-secondary" %>
+      </div>  
+    </div>
+  </div>
+</div>
